@@ -1,0 +1,15 @@
+Description:
+Let fancontrol leave the fan speed as it is instead of setting it to max when there 
+is no pwmN_enable file
+
+--- a/prog/pwm/fancontrol
++++ b/prog/pwm/fancontrol
+@@ -413,7 +413,7 @@ function pwmdisable()
+ 	# No enable file? Just set to max
+ 	if [ ! -f $ENABLE ]
+ 	then
+-		echo $MAX > $1
++		# echo $MAX > $1
+ 		return 0
+ 	fi
+ 
