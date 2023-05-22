@@ -1,0 +1,16 @@
+Description:
+Let fancontrol leave the fan speed as it is instead of setting it to max when enable pwm
+
+diff --git a/prog/pwm/fancontrol b/prog/pwm/fancontrol
+index 6da4cf00..bf74a963 100755
+--- a/prog/pwm/fancontrol
++++ b/prog/pwm/fancontrol
+@@ -505,7 +505,7 @@ function pwmenable()
+ 			return 1
+ 		fi
+ 	fi
+-	echo $MAX > $1
++	# echo $MAX > $1
+ }
+ 
+ function restorefans()
