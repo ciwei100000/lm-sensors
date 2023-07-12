@@ -1,3 +1,9 @@
+lm-sensors (1:3.6.0-7c3) unstable; urgency=medium
+
+  * revert patch 17-fancontrol-not-max-on-enable.patch.
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Tue, 11 Jul 2023 16:45:26 -0700
+
 lm-sensors (1:3.6.0-7c2) unstable; urgency=medium
 
   * add patch 17-fancontrol-not-max-on-enable.patch.
