@@ -6,3 +6,4 @@
 11-fancontrol-check.patch
 14-2-digits-kernel.patch
 15-path-max.patch
+16-egrep-pwmconfig.patch

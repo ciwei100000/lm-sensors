@@ -3,14 +3,14 @@ Section: utils
 Priority: optional
 Build-Depends: debhelper-compat (= 13), bison, flex
 Rules-Requires-Root: no
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Maintainer: Aurelien Jarno <aurel32@debian.org>
 Homepage: https://hwmon.wiki.kernel.org/lm_sensors
 
 Package: lm-sensors
 Architecture: linux-any
 Section: utils
-Depends: sed (>= 4.0.5-1), lsb-base (>= 3.2-13), ${misc:Depends}, ${shlibs:Depends}, ${perl:Depends}
+Depends: sed (>= 4.0.5-1), ${misc:Depends}, ${shlibs:Depends}, ${perl:Depends}
 Suggests: fancontrol, read-edid, i2c-tools
 Description: utilities to read temperature/voltage/fan sensors
  Lm-sensors is a hardware health monitoring package for Linux. It allows you
@@ -76,19 +76,11 @@ Description: lm-sensors development kit
  This package contains the static library and header files used in
  development.
 
-Package: libsensors4-dev
-Architecture: any
-Multi-Arch: same
-Depends: libsensors-dev (= ${binary:Version}), ${misc:Depends}
-Section: libdevel
-Description: transitional dummy package
- This is a transitional dummy package, it can be safely removed.
-
 Package: fancontrol
 Architecture: all
 Section: utils
 Pre-Depends: ${misc:Pre-Depends}
-Depends: lsb-base (>= 3.2-13), ${misc:Depends}
+Depends: ${misc:Depends}
 Description: utility to control the fan speed
  Lm-sensors is a hardware health monitoring package for Linux. It allows you
  to access information from temperature, voltage, and fan speed sensors. It
